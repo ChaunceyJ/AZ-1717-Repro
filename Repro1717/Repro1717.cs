@@ -22,7 +22,7 @@ namespace Repro1717
             var conn = new SqlConnection("<YOUR CONNECTION STRING GOES HERE>");
 
 
-            string cmdString = "SELECT TOP (1) [ID] ,[NAME] FROM[dbo].[TableName]";
+            string cmdString = "SELECT TOP (1) [ID] ,[NAME] FROM[dbo].[MyTable]";
 
             var cmd = new SqlCommand(cmdString, conn);
 
