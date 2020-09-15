@@ -20,3 +20,6 @@ CREATE TABLE [dbo].[MyTable](
 4. Update the connection string on [line 22](https://github.com/Jtango18/AZ-1717-Repro/blob/1cc54f5cb93ee027dd97197f9320a0aeb2fc7482/Repro1717/Repro1717.cs#L22) to be a valid connection string to your database
 
 5. Deploy/Run your function - it can be triggered using an HTTP Get request.
+
+## Successful Query
+![Successful Query](Success.png)
