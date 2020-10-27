@@ -1,4 +1,3 @@
-
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -18,8 +17,13 @@ namespace Repro1717
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
+            SqlConnectionStringBuilder sr = new SqlConnectionStringBuilder();
+            sr.DataSource = "localhost";
+            sr.UserID = "SA";
+            sr.Password = "password";
+            sr.InitialCatalog = "TestDB";
 
-            var conn = new SqlConnection("<YOUR CONNECTION STRING GOES HERE>");
+            var conn = new SqlConnection(sr.ConnectionString);
 
 
             string cmdString = "SELECT TOP (1) [ID] ,[NAME] FROM[dbo].[MyTable]";
